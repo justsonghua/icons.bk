@@ -16,14 +16,19 @@
         ul {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* 自动填充，每个格子大小相同 */
-            grid-column-gap: 5px; /* 横向间距 */
-            grid-row-gap: 20px;    /* 纵向间距 */
+            gap: 15px; /* 格子间隔 */
             padding: 0;
             list-style-type: none;
+            justify-items: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
         }
         li {
             text-align: center;
             max-width: 120px; /* 保证每个格子宽度一致 */
+            display: flex; /* 使用 flexbox 让图标和文件名在格子中居中 */
+            flex-direction: column; /* 让图标和文件名垂直排列 */
+            justify-content: center; /* 垂直居中 */
+            align-items: center; /* 水平居中 */
         }
         img {
             width: 100px;  /* 图标宽度 */
