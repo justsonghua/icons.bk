@@ -7,34 +7,38 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center; /* 确保页面内容居中 */
+            text-align: center;
         }
         h1 {
             font-size: 2em;
             margin-bottom: 20px;
         }
         ul {
-            display: flex;
-            flex-wrap: wrap; /* 使图标自动换行 */
-            justify-content: center; /* 居中对齐 */
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* 自动填充，并保持一致的格子大小 */
+            gap: 20px; /* 格子之间的间距 */
             padding: 0;
             list-style-type: none;
         }
         li {
-            margin: 20px;
-            text-align: center; /* 图标和文件名都居中 */
+            text-align: center;
+            max-width: 120px; /* 确保每个格子的宽度一致 */
         }
         img {
-            width: 100px;  /* 可以根据需要调整图标大小 */
-            height: 100px;
+            width: 100px;  /* 图标宽度 */
+            height: 100px;  /* 图标高度 */
             border: 1px solid #ddd;
             border-radius: 8px;
         }
         span {
             display: block;
-            margin-top: 8px; /* 图标和文件名之间的间距 */
+            margin-top: 8px;
             font-size: 14px;
             color: #555;
+            white-space: nowrap; /* 防止换行 */
+            overflow: hidden;
+            text-overflow: ellipsis; /* 文件名过长时显示省略号 */
+            max-width: 100%;  /* 保证文本不会超出格子 */
         }
     </style>
     <script>
