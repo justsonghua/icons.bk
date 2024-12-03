@@ -7,18 +7,22 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            text-align: center; /* 确保页面内容居中 */
         }
         h1 {
-            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
         }
         ul {
-            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap; /* 使图标自动换行 */
+            justify-content: center; /* 居中对齐 */
             padding: 0;
+            list-style-type: none;
         }
         li {
-            display: inline-block;
-            margin: 10px;
-            text-align: center; /* 保证图标和文件名居中 */
+            margin: 20px;
+            text-align: center; /* 图标和文件名都居中 */
         }
         img {
             width: 100px;  /* 可以根据需要调整图标大小 */
@@ -27,8 +31,8 @@
             border-radius: 8px;
         }
         span {
-            display: block; /* 文件名显示为块元素 */
-            margin-top: 5px;
+            display: block;
+            margin-top: 8px; /* 图标和文件名之间的间距 */
             font-size: 14px;
             color: #555;
         }
