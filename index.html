@@ -15,14 +15,14 @@
         }
         ul {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* 自动填充，并保持一致的格子大小 */
-            gap: 20px; /* 格子之间的间距 */
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* 自动填充，每个格子大小相同 */
+            gap: 20px; /* 格子间隔 */
             padding: 0;
             list-style-type: none;
         }
         li {
             text-align: center;
-            max-width: 120px; /* 确保每个格子的宽度一致 */
+            max-width: 120px; /* 保证每个格子宽度一致 */
         }
         img {
             width: 100px;  /* 图标宽度 */
@@ -36,9 +36,9 @@
             font-size: 14px;
             color: #555;
             white-space: nowrap; /* 防止换行 */
-            overflow: hidden;
-            text-overflow: ellipsis; /* 文件名过长时显示省略号 */
-            max-width: 100%;  /* 保证文本不会超出格子 */
+            overflow: hidden; /* 隐藏超出部分 */
+            text-overflow: ellipsis; /* 文件名超长时显示省略号 */
+            max-width: 100%; /* 保证文本不会超出格子 */
         }
     </style>
     <script>
